@@ -10,10 +10,11 @@ error:false,
 cargando:true,
 /*atributos para el guardar los valores del formulario */
 id:0,
-nombre:"",
+fecha:"",
+destino:"",
 imagen:"",
-stock:0,
-precio:0,
+paquetes:0,
+pasajeros:0,
 }
 },
 methods: {
@@ -42,9 +43,10 @@ location.reload();
 },
 grabar(){
 let producto = {
-nombre:this.nombre,
-precio: this.precio,
-stock: this.stock,
+nombre:this.fecha,
+precio: this.destino,
+stock: this.pasajeros,
+stock: this.paquetes,
 imagen:this.imagen
 }
 var options = {

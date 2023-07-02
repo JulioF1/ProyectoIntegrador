@@ -21,10 +21,11 @@ fetch(url)
 
 console.log(data)
 this.id=data.id
-this.nombre = data.nombre;
+this.fecha = data.fecha;
 this.imagen=data.imagen
-this.stock=data.stock
-this.precio=data.precio
+this.destino=data.destino
+this.paquetes=data.paquetes
+this.pasajeros=data.pasajeros
 })
 .catch(err => {
 console.error(err);
@@ -33,9 +34,10 @@ this.error=true
 },
 modificar() {
 let producto = {
-nombre:this.nombre,
-precio: this.precio,
-stock: this.stock,
+fecha:this.fecha,
+destino: this.destino,
+pasajeros: this.pasajeros,
+paquetes: this.paquetes,
 imagen:this.imagen
 }
 var options = {
