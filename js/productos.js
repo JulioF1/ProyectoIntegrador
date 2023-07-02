@@ -8,7 +8,7 @@ productos:[],
 url:'https://jfcodoacodo.pythonanywhere.com/productos', // si ya lo subieron a pythonanywhere
 error:false,
 cargando:true,
-/*atributos para el guardar los valores del formulario */
+/*atributos para  guardar los valores del formulario */
 id:0,
 fecha:"",
 destino:"",
