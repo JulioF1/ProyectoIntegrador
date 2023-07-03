@@ -27,7 +27,7 @@ body {
 .contenedor-general::-webkit-scrollbar {
     width: 5px;
     display: none;
-  }
+}
 
 header {
     position: fixed;
