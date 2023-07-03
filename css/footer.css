@@ -1,0 +1,75 @@
+footer{
+    bottom: 0;
+    width: 100%; 
+    background-color: #0A3B59;
+    color: white;
+    margin-top: .35em;
+}
+.container-footer-all{
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0;
+    padding: 0;
+}
+.container-body{
+    display: flex;
+    justify-content:  space-around;
+}
+.collogo img{  
+    width: 5em;
+    height: auto;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.Copyright{
+    font-size: xx-small;
+    margin-top: 1em;
+    margin-left: 1em;
+    color: #c7c7c7;
+}
+.colredes img{
+    width: 2em;
+    height: auto;
+    margin-left: 0.2em;
+
+}
+.whatsapp:hover, .instagram:hover,.facebook:hover {
+    scale: 1.50;
+}
+
+h1{
+    font-size: 1rem;
+    margin-top: 1em;
+}
+
+.information a{
+    text-decoration: none;
+    color: #c7c7c7;
+}
+.collogo p{
+    font-size: xx-small;
+    margin-top: 1em;
+    margin-left: 1em;
+    color: #c7c7c7;
+}
+.colinformacion,.colayuda,.colcontacto,.colredes{
+    max-width: 250px;
+}
+
+
+
+@media screen and (max-width:1100px){
+    .container-body{
+        flex-wrap: wrap;
+    }
+    .collogo{
+        max-width: 100%;
+    }
+    .colinformacion,
+    .colayuda,
+    .colcontacto,
+    .colredes{
+        margin: top 10px;
+    }
+}

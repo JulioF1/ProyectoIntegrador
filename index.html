@@ -1,12 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Title</title>
+<title>Registro Venta de Paquetes</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
 integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
 crossorigin="anonymous">
+<link rel="stylesheet" href="css/main.css" />
+<link rel="shortcut icon" href="img/favicon.ico" /> 
+<link rel="stylesheet" href="css/footer.css" />
+<link rel="stylesheet" href="css/navbar.css" />
 </head>
 <body>
 <header id="header">
@@ -36,7 +40,7 @@ crossorigin="anonymous">
 <th scope="col">Destino</th>
 <th scope="col">Paquetes</th>
 <th scope="col">Pasajeros</th>
-<th scope="col">Imagen</th>
+<th scope="col">Precio</th>
 </tr>
 </thead>
 <tbody>
@@ -46,9 +50,7 @@ crossorigin="anonymous">
 <td>{{producto.destino}}</td>
 <td>{{producto.paquetes}}</td>
 <td>{{producto.pasajeros}}</td>
-<td>
-<img width="60" :src="producto.imagen" :alt="producto.nombre">
-</td>
+<td>{{producto.imagen}}</td>
 <td>
 <a class="btn btn-primary" :href="'producto_update.html?id='+ producto.id" >Editar</a>
 <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" >Eliminar</button>
@@ -62,10 +64,56 @@ crossorigin="anonymous">
 </div>
 </main>
 <footer>
-<!-- place footer here -->
-</footer>
+    <div class="container-footer-all">
+        <div class="container-body">
+
+            <div class="collogo">
+                <img src="img/logo.png">
+                <p class="Copyright">&copy;Copyright 2023 Go to Travel.<br>Todos los derechos reservados.</p>
+            </div><!--collogo-->
+
+            <div class="colinformacion">
+                <h1>Información</h1>
+                <ul type="none">
+                    <li><a href="#">Inicio</a> </li>
+                    <li><a href="#">Viajes</a></li>
+                    <li><a href="#">Quiénes Somos</a></li>
+                    <li><a href="#">Contáctenos</a></li>
+                </ul>
+            </div><!--colinformacion-->
+
+            <div class="colayuda">
+                <h1>Ayuda</h1>
+                <ul type="none">
+                    <li><a href="https://www.argentina.gob.ar/interior/migraciones/entrada-y-salida-del-pais"
+                            target="_blank" rel="noopener noreferrer">Documentación para su viaje</a></li>
+                    <li><a href="https://www.argentina.gob.ar/viajar-con-menores-de-edad-en-micros-de-larga-distancia"
+                            target="_blank" rel="noopener noreferrer">Traslado de Menores</a></li>
+                    <li><a href="http://mascotas.senasa.gob.ar" target="_blank" rel="noopener noreferrer">
+                            Traslado
+                            de Mascotas</a></li>
+                </ul>
+            </div><!--colayuda-->
+
+            <div class="colredes">
+                <h1>Redes</h1>
+                <table logos>
+                    <tr>
+                        <th><a href="https://wa.me/5491111112345?from=footer" target="_blank"
+                                rel="nofollow"><img class="whatsapp" src="img/WSPlogo.png"></a></th>
+                        <th><a href="https://www.instagram.com" target="_blank" rel="nofollow"><img
+                                    class="instagram" src="img/IGlogo.png"></a></th>
+                        <th><a href="https://www.facebook.com" target="_blank" rel="nofollow"><img
+                                    class="facebook" src="img/FBlogo.png"></a></th>
+                    </tr>
+                </table>
+            </div><!--colredes-->
+
+        </div><!--container-body-->
+    </div><!--container-footer-all-->
+</footer><!--footer-->
 <script>
-<!--Link de Bootstrap-->
+// <!--Link de Bootstrap-->
 src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
 integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
 crossorigin="anonymous"</script>
@@ -75,5 +123,7 @@ crossorigin="anonymous"></script>
 <script src="./js/main.js"></script>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
 <script src="./js/productos.js"></script>
+<script src="js/navbar.js"></script> <!-- barra de navegacion. Se llama luego del body, soluciona TypeError onclick-->
+</body>
 </body>
 </html>

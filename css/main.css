@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 100%;
+    background-color: #fff;
+}
+
+.contenedor-general{
+    overflow: scroll;
+}
+
+.contenedor-general::-webkit-scrollbar {
+    width: 5px;
+    display: none;
+  }
+
+header {
+    position: fixed;
+    padding: 0 2rem;
+    background-color: #0A3B59;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* Responsive pantallas pequeñas */
+@media screen and (max-width: 414px) {
+
+    /* Carrusel*/
+    .contenidoSlider .anterior {
+        width: 5px;
+        margin-right: 2em;
+    }
+
+    .contenidoSlider .siguiente {
+        width: 5px;
+        margin-left: 2em;
+    }
+
+    .contenidoSlider .informacion {
+        width: 100%;
+    }
+}
+
+
+/* Responsive pantallas medianas */
+@media screen and (max-width: 810px) {
+
+    /* Barra navegación */
+    .navbar .links,
+    .header {
+        display: none;
+    }
+    .navbar .toggle_btn {
+        display: block;
+    }
+    .dropdown_menu {
+        display: block;
+    }
+
+    /* Carrusel*/
+    .contenidoSlider .anterior {
+        width: 5px;
+        margin: 0;
+    }
+    .contenidoSlider .siguiente {
+        width: 5px;
+        margin: 0;
+    }
+    .contenidoSlider .informacion {
+        margin: 0 3em 0 3em;
+        padding: 0 4em 0 4em;
+        width: 100%;
+    }
+}
+
+/* Adicional Barra navegación: hace que dopdown se pegue al otro extremo */
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+} 
