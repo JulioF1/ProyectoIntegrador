@@ -43,10 +43,10 @@ location.reload();
 },
 grabar(){
 let producto = {
-nombre:this.fecha,
-precio: this.destino,
-stock: this.pasajeros,
-stock: this.paquetes,
+fecha:this.fecha,
+destino: this.destino,
+pasajeros: this.pasajeros,
+paquetes: this.paquetes,
 imagen:this.imagen
 }
 var options = {
