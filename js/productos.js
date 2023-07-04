@@ -12,7 +12,7 @@ cargando:true,
 id:0,
 fecha:"",
 destino:"",
-imagen:"",
+precio:0,
 paquetes:0,
 pasajeros:0,
 }
@@ -47,7 +47,7 @@ fecha:this.fecha,
 destino: this.destino,
 pasajeros: this.pasajeros,
 paquetes: this.paquetes,
-imagen:this.imagen
+precio:this.precio
 }
 var options = {
 body:JSON.stringify(producto),

@@ -7,7 +7,7 @@ data() {
 return {
 id:0,
 nombre:"",
-imagen:"",
+precio:0,
 stock:0,
 precio:0,
 url:'https://jfcodoacodo.pythonanywhere.com/productos/'+id,
@@ -22,7 +22,7 @@ fetch(url)
 console.log(data)
 this.id=data.id
 this.fecha = data.fecha;
-this.imagen=data.imagen
+this.precio=data.precio
 this.destino=data.destino
 this.paquetes=data.paquetes
 this.pasajeros=data.pasajeros
@@ -38,7 +38,7 @@ fecha:this.fecha,
 destino: this.destino,
 pasajeros: this.pasajeros,
 paquetes: this.paquetes,
-imagen:this.imagen
+precio:this.precio
 }
 var options = {
 body: JSON.stringify(producto),
